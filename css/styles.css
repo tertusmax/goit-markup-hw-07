@@ -85,11 +85,17 @@ button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity var(--transition-duration-and-fanc),
+    visibility var(--transition-duration-and-fanc),
+    poiner-events var(--transition-duration-and-fanc);
 }
 .mobile-menu.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+  transition: opacity var(--transition-duration-and-fanc),
+    visibility var(--transition-duration-and-fanc),
+    poiner-events var(--transition-duration-and-fanc);
 }
 .mobile-menu-closed-btn {
   border-radius: 50%;
@@ -539,14 +545,25 @@ button {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  min-width: 165px;
-
+  width: 165px;
+  margin-right: auto;
+  margin-left: auto;
   color: #ffffff;
   border: none;
 }
 .footer-subscribe-btn-svg {
   margin-left: 16px;
 }
+/*Portfolio*/
+/*Buttons*/
+.button-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 72px;
+}
+/*Widjet*/
+
 @media screen and (min-width: 768px) {
   .section-project {
     display: none;
@@ -741,6 +758,42 @@ button {
     width: 167px;
   }
   /*Footer*/
+  .footer-section-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+  .footer-div {
+    padding-right: 24px;
+  }
+  .footer-form {
+    flex-direction: row;
+  }
+  .footer-form-input {
+    width: 264px;
+  }
+  .foter-main-div-list {
+    justify-content: start;
+  }
+  .social-media-list {
+    justify-content: start;
+    margin-top: 58px;
+  }
+  .footer-main-div {
+    width: 496px;
+  }
+  .page-logo-footer {
+    justify-content: start;
+  }
+  /*Portfolio*/
+  /*button*/
+  .button-list {
+    justify-content: center;
+  }
+  /**/
 }
 @media screen and (min-width: 1200px) {
   .section-project {
@@ -900,6 +953,20 @@ button {
     height: 88px;
     width: 167px;
   }
+  /*Footer*/
+  .footer-div {
+    margin-right: 120px;
+    margin-top: 20px;
+  }
+  .social-media-list {
+    margin-top: 70px;
+  }
+  .footer-main-div {
+    margin-left: 80px;
+  }
+  .footer-section-container {
+    flex-wrap: nowrap;
+  }
 }
 /*Main*/
 /*Container*/
@@ -996,12 +1063,6 @@ img {
 }
 ul {
   padding: 0px;
-}
-.button-list {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-bottom: 72px;
 }
 .section-main {
   padding-top: 96px;
